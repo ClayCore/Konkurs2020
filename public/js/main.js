@@ -2,7 +2,7 @@
     'use strict';
 
     /* UTILITY FUNCTIONS */
-    let $ = function(what) {
+    function $(what) {
         return document.querySelector(what);
     }
 
@@ -13,22 +13,33 @@
 
     /* MAIN CODE BEGINS HERE */
 
-    // Linking the initial master file
-    let linkStyle = function(style) {
-        let styleSheet = dirNames[0] + style + '.css';
-        let styleSheetLink = document.createElement('link');
+    // Wait for dom to be finished loading
+    document.addEventListener('DOMContentLoaded', function() {
+        // Linking the initial master file
+        let linkStyle = function(style) {
+            let styleSheet = dirNames[0] + style + '.css';
+            let styleSheetLink = document.createElement('link');
 
-        styleSheetLink.href = styleSheet;
-        styleSheetLink.rel = 'stylesheet';
-        styleSheetLink.type = 'text/css';
+            styleSheetLink.href = styleSheet;
+            styleSheetLink.rel = 'stylesheet';
+            styleSheetLink.type = 'text/css';
 
-        document.head.appendChild(styleSheetLink);
-    }
+            document.head.appendChild(styleSheetLink);
+        }
 
-    /* MAIN INITIALIZATION */
-    let init = function() {
-        linkStyle('master');
-    }
+        /* MAIN INITIALIZATION */
+        let init = function() {
+            linkStyle('master');
+            linkStyle('anims/main');
 
-    init();
+            // Loader spinner
+            setTimeout(function() {
+                console.log('Loaded');
+                $('body').classList.add('loaded');
+            }, 3000);
+        }
+
+        init();
+    }, false);
+
 })();
