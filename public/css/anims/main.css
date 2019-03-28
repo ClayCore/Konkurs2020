@@ -2,27 +2,47 @@
 
 /* Loader */
 
+@-webkit-keyframes change {
+    0% {
+        background-color: #222;
+        opacity: 0;
+    }
+
+    100% {
+        background-color: #ddd;
+        opacity: 1;
+    }
+}
+
+@keyframes change {
+    0% {
+        opacity: 0;
+        background-color: #222;
+    }
+
+    100% {
+        background-color: #ddd;
+        opacity: 1;
+    }
+}
+
 @-webkit-keyframes spin {
     0%   {
         -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
         transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
     }
     100% {
         -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
         transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
     }
 }
 @keyframes spin {
     0%   {
         -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
         transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
     }
     100% {
         -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
         transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
     }
 }
@@ -112,9 +132,9 @@
 }
 
 .loaded #loader {
-    opacity: 0;
     -webkit-transition: all 0.3s 1s ease-out;
     transition: all 0.3s 1s ease-out;
+    opacity: 0;
 }
 
 .loaded #loader-wrapper {
@@ -131,4 +151,9 @@
 .loaded #loaded-wrapper .loader-section.section-right {
     -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
     transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.changed {
+    animation: change 0.5s linear;
+    -webkit-animation: change 0.5s linear;
 }

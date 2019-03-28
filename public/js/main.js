@@ -36,7 +36,10 @@
             setTimeout(function() {
                 console.log('Loaded');
                 $('body').classList.add('loaded');
+                $('body').classList.add('changed');
             }, 3000);
+
+            // Background-color change
         }
 
         init();

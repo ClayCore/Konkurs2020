@@ -1,3 +1,88 @@
+/* FONT DEFINITIONS */
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-Thin.ttf');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-ThinItalic.ttf');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-Light.ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-LightItalic.ttf');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-Italic.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-Medium.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-MediumItalic.ttf');
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-Bold.ttf');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-BoldItalic.ttf');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-Black.ttf');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../res/fonts/Roboto-BlackItalic.ttf');
+	font-weight: 800;
+	font-style: italic;
+}
+
 /* CSS RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,8 +134,54 @@ body, html {
     width: 100%;
 }
 
+body {
+	background-color: #ddd;
+}
+
 #wrapper {
     width: 100%;
     height: 100%;
-    background-color: #222;
+	background-color: rgba(255, 255, 255, 0);
+	color: #ffffff;
+	font-family: 'Roboto';
+}
+
+/* sidebar */
+aside {
+	width: 20%;
+	height: 100%;
+	background-color: rgba(29, 68, 110, 1);
+}
+
+/* topbar styling */
+header {
+    width: 80%;
+    height: 3vw;
+    position: fixed;
+    top: 0;
+	right: 0;
+    display: flex;
+    background-color: rgba(29, 68, 110, 1);
+	/* box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5); */
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+#info {
+	margin-left: 1em;
+}
+
+header #button {
+	margin-right: 1em;
+	height: 1.8em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	border: 2px solid #fff;
+	border-radius: 0.5em;
 }
