@@ -158,7 +158,14 @@ aside {
 #banner {
 	width: 100%;
 	height: 20%;
-	background-color: rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#banner img {
+	width: 100%;
+	height: auto;
 }
 
 nav {
@@ -172,14 +179,14 @@ nav .option {
 	font-weight: 300;
 	height: 2em;
 	color: #fff;
-	font-size: 1.4em;
+	font-size: 1.4rem;
 	text-decoration: none;
 	justify-content: flex-start;
 	box-sizing: border-box;
-	padding-left: 1em;
+	padding-left: 1rem;
 	align-items: center;
 	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
-	transition: background-color 0.2s cubic-bezier(0.643, 0.3, 0.3, 0.1);
+	transition: background-color 0.2s ease-in;
 }
 nav .option:hover {
 	background-color: rgba(255, 255, 255, 0.3);
@@ -187,15 +194,9 @@ nav .option:hover {
 
 nav .option i {
 	box-sizing: border-box;
-	padding-right: 1em;
-	font-size: 1.2em;
-}
-
-nav .option i:last-child {
-	padding-right: 0;
-	padding-left: 0.5em;
-	font-size: 1.2em;
-	box-sizing: border-box;
+	width: 2.5rem;
+	padding-right: 1rem;
+	font-size: 1.5rem;
 }
 
 nav .separator {
