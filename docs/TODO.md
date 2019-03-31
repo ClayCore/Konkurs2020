@@ -2,19 +2,19 @@
 -----
 
 ## Wersjowanie i technologie:
-- [ ] Strona napisana przy wkorzystaniu technologii wersjowania **Git**,
-- [ ] Publiczne i otwarte repozytorium na **Github**,
-- [ ] Strona napisana w środowisku **Visual Studio Code**
+- [x] Strona napisana przy wkorzystaniu technologii wersjowania **Git**,
+- [x] Publiczne i otwarte repozytorium na **Github**,
+- [x] Strona napisana w środowisku **Visual Studio Code**/**Atom**
 - [ ] Zabezpieczone repozytorium i prywatny mirror na **GitLab**,
-- [ ] Logiczne, spójne i szczegółowe wiadomości commit'ów
+- [x] Logiczne, spójne i szczegółowe wiadomości commit'ów
 
 ## Statyczna wersja witryny:
 - [ ] Design **Infini-Scroll** dla łatwej nawigacji i responsywności,
 - [ ] Strona napisana modularnie,
-- [ ] Dynamiczny kontent,
-- [ ] Podlinkowywanie wszystkiego na podstawie **JS6**
+- [x] Dynamiczny kontent,
+- [x] Podlinkowywanie wszystkiego na podstawie **JS6**
 - [ ] Przystosowanie strony dla każdego urządzenia i obsługa **No-Script**,
-- [ ] Preloader i cache'owanie kontentu,
+- [x] Preloader i cache'owanie kontentu,
 - [ ] Obsługa wielu silników renderowania: Chromium, Gecko, Webkit,
 
 ## Baza danych:
