@@ -34,3 +34,42 @@
     align-items: center;
     font-style: italic;
 }
+
+/* Tiles */
+div.tiles {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    height: 50rem;
+    margin-bottom: 2rem;
+}
+
+div.tiles .column {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+}
+
+.column .tile {
+    width: 90%;
+    height: 18rem;
+    background-color: #ddd;
+    border-radius: 2%;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.column .subtitle {
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 1.6em;
+    font-weight: bold;
+}
