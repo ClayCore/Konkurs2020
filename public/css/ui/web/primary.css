@@ -99,11 +99,21 @@ footer {
 }
 
 footer .header {
-    height: 100%;
-    height: 5rem;
+    width: 100%;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     font-style: italic;
+}
+
+footer .subtitle {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-size: 1.3rem;
 }
