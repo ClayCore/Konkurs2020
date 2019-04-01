@@ -253,7 +253,7 @@ nav .separator {
 /* topbar styling */
 header {
     width: 80%;
-    height: 3vw;
+    height: 3rem;
     position: fixed;
     top: 0;
 	right: 0;
@@ -263,6 +263,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: row;
+	z-index: 100;
 }
 
 #info {
@@ -271,7 +272,7 @@ header {
 
 header #button {
 	margin-right: 1em;
-	height: 1.8em;
+	height: 1.6em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -281,6 +282,12 @@ header #button {
 	padding-right: 0.4em;
 	border: 2px solid #fff;
 	border-radius: 0.5em;
+	user-select: none;
+	-moz-user-select: none;
+}
+
+header #button:hover {
+	cursor: pointer;
 }
 
 main {

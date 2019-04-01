@@ -9,8 +9,6 @@
         return document.querySelector(what);
     }
 
-    // Get
-
     /* GLOBAL VALUES */
     /* ============= */
 
@@ -19,7 +17,7 @@
     const dirUp = '../';
 
     // Version of the app
-    const VERSION = "1.0.1";
+    const VERSION = "1.0.2";
 
     /* MAIN CODE BEGINS HERE */
     /* ===================== */
