@@ -295,7 +295,7 @@ main {
 	height: 100%;
 	display: flex;
 	position: fixed;
-	top: 3vw;
+	top: 3rem;
 	left: 20%;
 }
 
