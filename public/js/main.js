@@ -9,6 +9,11 @@
         return document.querySelector(what);
     }
 
+    // Return a nodelist of the elements selected
+    function _(what) {
+        return document.querySelectorAll(what);
+    }
+
     /* GLOBAL VALUES */
     /* ============= */
 
@@ -37,6 +42,24 @@
             document.head.appendChild(styleSheetLink);
         }
 
+        // Change iframe based on href in the navbar
+        let navGoTo = function(where) {
+            $('iframe').src = where;
+        }
+
+        // Adding navbar functionality
+        let navLaunch = function(nodelist) {
+            // Check if it exists
+            if(nodelist !== null) {
+                // For each element check it's id and change the iframe;
+                nodelist.forEach(element => {
+                    element.onclick = function() {
+                        navGoTo(element.id);
+                    }
+                });
+            }
+        }
+
         /* MAIN INITIALIZATION */
         let init = function() {
             // Check the resolution for the mobile version
@@ -47,6 +70,7 @@
                 linkStyle(dirUp + dirUp + dirUp + 'css/master');
                 linkStyle(dirUp + dirUp + dirUp + 'css/anims/main');
 
+                // If we're running a small browser window indicating mobile use, load additional css
                 if(width < 640) {
                     linkStyle(dirUp + dirUp + dirUp + 'css/mobile/master');
                 }
@@ -62,23 +86,29 @@
             // Check the location of the document to load any additional css
             let loc = window.location.pathname;
             let dir = loc.substring(0, loc.lastIndexOf('/'));
-            console.log(dir);
+            // console.log(dir);
 
             // Regular Webpages
             if(dir == "/web/main") {
                 linkStyle(dirUp + dirUp + dirUp + 'css/ui/web/primary');
+            } else {
+                // Loader spinner for the body element of the main page
+                setTimeout(function() {
+                    $('body').classList.add('loaded');
+                    $('body').classList.add('changed');
+                }, 3000);
             }
-
-            // Loader spinner
-            setTimeout(function() {
-                $('body').classList.add('loaded');
-                $('body').classList.add('changed');
-            }, 3000);
 
             // Set the Version
             if($('#version')) {
                 $('#version').innerHTML = VERSION;
             }
+
+            // Get the list of all nav buttons
+            let navNodeList = _('.option');
+
+            // Launch the navbar
+            navLaunch(navNodeList);
         }
 
         // Initialize with default CSS
