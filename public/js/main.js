@@ -42,6 +42,11 @@
             document.head.appendChild(styleSheetLink);
         }
 
+        // Contact List switch
+        let contactLink = function(what) {
+            $('iframe').src = '../web/main/contact.html';
+        }
+
         // Change iframe based on href in the navbar
         let navGoTo = function(where) {
             $('iframe').src = where;
@@ -96,12 +101,22 @@
                 setTimeout(function() {
                     $('body').classList.add('loaded');
                     $('body').classList.add('changed');
-                }, 3000);
+                }, 1000);
             }
 
             // Set the Version
             if($('#version')) {
                 $('#version').innerHTML = VERSION;
+            }
+
+            // Get the contactButton ID
+            let contactButton = $('#button');
+
+            // OnClick that action
+            if(contactButton) {
+                contactButton.onclick = function() {
+                    contactLink(contactButton);
+                }
             }
 
             // Get the list of all nav buttons

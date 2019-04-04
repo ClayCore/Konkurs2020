@@ -1,9 +1,5 @@
 @import url('../master.css');
 
-body {
-    scroll-behavior: smooth;
-}
-
 #headline {
     width: 100%;
     height: calc(20% - 5% + 3ch);
@@ -146,8 +142,10 @@ footer {
 }
 
 footer .header {
+    position: relative;
+    top: 1rem;
     width: 100%;
-    height: 4rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,6 +154,8 @@ footer .header {
 }
 
 footer .subtitle {
+    position: relative;
+    top: 1rem;
     width: 100%;
     height: 2rem;
     display: flex;
