@@ -235,9 +235,12 @@ nav .option {
 	align-items: center;
 	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
 	transition: background-color 0.2s ease-in;
+	user-select: none;
+	-moz-user-select: none;
 }
 nav .option:hover {
 	background-color: rgba(255, 255, 255, 0.3);
+	cursor:pointer;
 }
 
 nav .option i {
@@ -276,7 +279,7 @@ header {
 	margin-left: 1em;
 }
 
-header #button {
+header .button {
 	margin-right: 1em;
 	height: 1.6em;
 	display: flex;

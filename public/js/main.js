@@ -4,6 +4,19 @@
     /* UTILITY FUNCTIONS */
     /* ================= */
 
+    // Loading a file
+    function loadFile(path) {
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if(this.readystate == 4 & this.status == 200) {
+                let jsonData = JSON.parse(this.responseText);
+            }
+        }
+
+        xmlhttp.open('GET', path, true);
+        xmlhttp.send();
+    }
+
     // Get an element based on its selector
     function $(what) {
         return document.querySelector(what);
@@ -20,6 +33,10 @@
     // List of directories for use in file loading operations
     const dirNames  = ['css/', 'config/', 'web/', 'docs/'];
     const dirUp = '../';
+
+    // Config loading
+    const cfgFilePath = dirUp + 'setup/config.json';
+    const cfgFile = loadFile(cfgFilePath);
 
     // Version of the app
     const VERSION = "1.0.2";
@@ -93,15 +110,17 @@
             let dir = loc.substring(0, loc.lastIndexOf('/'));
             // console.log(dir);
 
-            // Regular Webpages
-            if(dir == "/web/main") {
+            // Regular subpages
+            if(dir == '/web/main') {
                 linkStyle(dirUp + dirUp + dirUp + 'css/ui/web/primary');
-            } else {
+            } else if(dir == '') {
                 // Loader spinner for the body element of the main page
                 setTimeout(function() {
                     $('body').classList.add('loaded');
                     $('body').classList.add('changed');
-                }, 1000);
+                }, 3000);
+
+                // Load the config file
             }
 
             // Set the Version
@@ -110,7 +129,7 @@
             }
 
             // Get the contactButton ID
-            let contactButton = $('#button');
+            let contactButton = $('.button');
 
             // OnClick that action
             if(contactButton) {
